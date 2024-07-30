@@ -1,0 +1,16 @@
+footer{
+  border-top: .0625rem solid #DEC129;
+  text-align: center;
+  height: auto;
+
+  padding: 1.25rem;
+
+  & > h3{
+    margin-bottom: 1.25rem;
+  }
+
+  & > span{
+    color: #DEC129;
+    font-weight: 700;
+  }
+}

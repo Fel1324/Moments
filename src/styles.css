@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #444;
+  list-style: none;
+}
+
+html, body, app-root{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+app-root{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  color: #444;
+
+  transition: .4s;
+  &:hover{
+    color: #DEC129;
+  }
+}
+
+img{
+  vertical-align: top;
+}
+
+button, input[type='submit'], input[type='file']{
+  cursor: pointer;
+}
+
+/* FORM */
+form{
+  width: min(100%, 28.125rem);
+  margin-inline: auto;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  & label{
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: .375rem;
+  }
+
+  & input, & textarea{
+    max-width: 28.125rem;
+
+    color: #777;
+    padding: .625rem;
+    font-size: 1rem;
+  }
+
+  & textarea{
+    min-width: 18.75rem;
+    min-height: 3.625rem;
+  }
+}
+
+input[type='submit']{
+  background-color: #CCC;
+  border: .125rem solid transparent;
+
+  padding: .625rem 1rem;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  transition: .4s;
+  &:hover{
+    background-color: transparent;
+    border-color: #DEC129;
+    color: #DEC129;
+  }
+}
+
+.validation-error p{
+  color: #DC3545;
+  border-left: .125rem solid #DC3545;
+
+  margin-top: .375rem;
+  padding-left: .1875rem;
+}
