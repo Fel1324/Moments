@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { RouterLink } from '@angular/router';
-
 import { Moment } from '../../../interfaces/Moment';
 import { MomentService } from '../../../services/moment.service';
 import { environment } from '../../../../environments/environment';
@@ -24,6 +22,8 @@ export class HomeComponent implements OnInit {
   moments: Moment[] = [];
   baseApiUrl = environment.baseApiUrl;
 
+  searchTerm: string = '';
+
   constructor(private momentService: MomentService){}
 
   ngOnInit(): void{
@@ -37,5 +37,14 @@ export class HomeComponent implements OnInit {
       this.allMoments = data;
       this.moments = data;
     });
+  }
+
+  search(e: Event): void{
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.moments = this.allMoments.filter(moment =>
+      moment.title.toLocaleLowerCase().includes(value)
+    );
   }
 }
