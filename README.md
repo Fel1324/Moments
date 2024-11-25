@@ -28,7 +28,7 @@
 
 <h2 id="sobre">📖 Sobre o projeto</h2>
 
-<p align="justify">É uma aplicação para cadastrar e excluir momentos incríveis vivenciados.</p>
+<p align="justify">Aplicação para cadastrar e excluir momentos incríveis vivenciados.</p>
 
 <br>
 
